@@ -1,0 +1,17 @@
+.DS_store
+.env
+.idea
+.pytest_cache
+.python-version
+.vscode
+
+*.ipynb
+*.pyc
+*.html
+
+sumukha
+
+*notebook*
+
+outputs/*
+!outputs/.gitkeep
