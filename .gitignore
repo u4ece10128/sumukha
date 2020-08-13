@@ -8,8 +8,7 @@
 *.ipynb
 *.pyc
 *.html
-
-sumukha
+venv/
 
 *notebook*
 

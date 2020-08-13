@@ -5,6 +5,7 @@ For further informations about change log please go [here](http://keepachangelog
 
 ## [Unreleased]
 ### change
-
+- storage of large files
+- Implement Pre-Process pipeline 
 - Create folder structure and Download dataset
 - Project setup

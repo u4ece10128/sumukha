@@ -24,7 +24,10 @@ setup(
         'numpy== 1.16.2',
         'pandas==0.24.0',
         'dotmap==1.2.17',
-        'fasttext==0.9.2'
+        'fasttext==0.9.2',
+        'igenius.brushes[full]==18.1.1',
+        'bs4==0.0.1',
+        'scikit-learn==0.20.3',
         ],
     extras_require={
         'dev': [
@@ -41,6 +44,7 @@ setup(
             'ipdb==0.12.3',
             'pep8-naming==0.5.0',
             'bumpversion==0.5.3',
+            'jupyter==1.0.0',
         ],
     },
 )

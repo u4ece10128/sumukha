@@ -1,0 +1,8 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+*.txt filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+data/preprocess/data.txt filter=lfs diff=lfs merge=lfs -text
+data/preprocess/dataset.pkl filter=lfs diff=lfs merge=lfs -text
+data/raw/imdb_dataset.csv filter=lfs diff=lfs merge=lfs -text
+embeddings/domain/domain_embeddins_en.bin filter=lfs diff=lfs merge=lfs -text
