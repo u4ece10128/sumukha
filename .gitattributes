@@ -5,4 +5,7 @@
 data/preprocess/data.txt filter=lfs diff=lfs merge=lfs -text
 data/preprocess/dataset.pkl filter=lfs diff=lfs merge=lfs -text
 data/raw/imdb_dataset.csv filter=lfs diff=lfs merge=lfs -text
-embeddings/domain/domain_embeddins_en.bin filter=lfs diff=lfs merge=lfs -text
+embeddings/domain/vectors.bin filter=lfs diff=lfs merge=lfs -text
+embeddings/general/vectors.pkl filter=lfs diff=lfs merge=lfs -text
+embeddings/general/vocab.pkl filter=lfs diff=lfs merge=lfs -text
+embeddings/domain/vocab.pkl filter=lfs diff=lfs merge=lfs -text
