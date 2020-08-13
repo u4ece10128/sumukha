@@ -10,7 +10,7 @@ from brushes.nlp.encoders import (
 
 from sklearn.pipeline import Pipeline
 
-from sumukha.config import PUNCTUATION, preprocess_path
+from sumukha.config import PUNCTUATION, input_preprocess_path
 
 import re
 
@@ -51,7 +51,7 @@ def clean_data(data):
 
     data['review'] = features_encoder.transform(reviews.copy())
 
-    data['review'].to_csv(preprocess_path + 'data.txt', index=False, header=False)
+    data['review'].to_csv(input_preprocess_path + 'data.txt', index=False, header=False)
 
     return data
 

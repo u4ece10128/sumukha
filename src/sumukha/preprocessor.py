@@ -10,7 +10,7 @@ import pandas as pd
 
 
 def preprocessor(root_path='./', input_path=config.input_file_path,
-                 preprocess_path=config.preprocess_path):
+                 preprocess_path=config.input_preprocess_path):
     # Create preprocess dir if it doesn't exists
     if not os.path.exists(preprocess_path):
         os.makedirs(preprocess_path)
