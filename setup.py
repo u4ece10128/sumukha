@@ -21,8 +21,8 @@ setup(
     package_dir={'': 'src'},
     zip_safe=False,
     install_requires=[
-        'numpy== 1.16.2',
-        'pandas==0.24.0',
+        'numpy==1.18.5',
+        'pandas==1.0.3',
         'dotmap==1.2.17',
         'fasttext==0.9.2',
         'igenius.brushes[full]==18.1.1',
@@ -46,5 +46,8 @@ setup(
             'bumpversion==0.5.3',
             'jupyter==1.0.0',
         ],
+        'tf': [
+            'tensorflow==2.2.0',
+        ]
     },
 )
