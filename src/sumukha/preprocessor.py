@@ -25,7 +25,7 @@ def preprocessor(root_path='./', input_path=config.input_file_path,
     }
     preprocess_path = root_path + preprocess_path
 
-    # Save preprocessed dataset and encoders to data/preprocess
+    # Save preprocessed dataset and encoding to data/preprocess
     save_obj(preprocessed_dataset, preprocess_path, 'dataset')
     print(f'Preprocessed files from "{input_path}" moved in "{preprocess_path}"')
     return preprocessed_dataset
