@@ -9,3 +9,6 @@ embeddings_path_domain = os.environ.get('DOMAIN_EM_PATH', 'embeddings/domain/')
 embeddings_path_general = os.environ.get('GEN_EM_PATH', 'embeddings/general/')
 
 PUNCTUATION = r"""!"#%&'()*+,-./:;<=>?@[\]^_`{|}~‘’"""
+
+general_embeddings_vocab = os.environ.get('GEN_VOCAB', 'embeddings/general/')
+general_embeddings_vectors = os.environ.get('GEN_VECTOR', 'embeddings/general/')
