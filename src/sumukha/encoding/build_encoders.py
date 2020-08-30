@@ -1,3 +1,4 @@
+import fasttext as ft
 import numpy as np
 from brushes.io import filesystem
 from sumukha.config import input_preprocess_path
@@ -31,10 +32,26 @@ def general_encoders(preprocess_path, embeddings_path):
     filesystem.save_obj(vectors, preprocess_path, 'general_vector_processed')
 
 
-def domain_encoders(preprocess_path, model_result_path):
+def domain_encoders(preprocess_path, trained_embeddings_path):
     """
-
-    :param dataset:
+    Uses fasttext embeddings trained on the domain data set.
+    :param preprocess_path:
+    :param trained_embeddings_path
     :return:
     """
-    pass
+    model = ft.load_model(trained_embeddings_path + 'vectors.bin')
+    vocab = model.words
+
+    vocab = {key: index for index, key in enumerate(vocab)}
+
+    vocab = {key: index for index, key in enumerate(vocab)}
+    if '<unk>' not in vocab:
+        vocab['<unk>'] = len(vocab)
+
+    vectors = np.zeros((len(vocab), 100), dtype=np.float32)
+    for word, index in vocab.items():
+        vectors[index] = model.get_word_vector(word)
+
+    filesystem.save_obj(vocab, preprocess_path, 'domain_vocab_processed')
+    filesystem.save_obj(vectors, preprocess_path, 'domain_vector_processed')
+
