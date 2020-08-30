@@ -5,6 +5,7 @@ For further informations about change log please go [here](http://keepachangelog
 
 ## [Unreleased]
 ### change
+- Move training of domain based embeddings 
 - Implement Encoding using the general word embeddings
 - Implement training of domain embeddings
 - storage of large files
