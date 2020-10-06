@@ -20,6 +20,11 @@ def preprocessor(root_path='./', input_path=config.input_file_path,
 
     data = pd.read_csv(input_path + os.listdir(input_path)[0], keep_default_na=False)
 
+    sentiment = data['sentiment'].value_counts()
+    print('Number of postive samples: {}'.format(sentiment['positive']))
+    print('Number of negative samples: {}'.format(sentiment['negative']))
+    print('Total Number of samples: {}'.format(data.shape[0]))
+
     preprocessed_dataset = {
         'features': clean_data(data),
     }

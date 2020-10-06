@@ -5,6 +5,7 @@ For further informations about change log please go [here](http://keepachangelog
 
 ## [Unreleased]
 ### change
+- Implement Evaluation pipeline - Semantic Classifier
 - Perform Canonical Correlation Analysis on the embeddings 
 - Implement Encoding using domain based embeddings 
 - Implement Encoding using the general word embeddings

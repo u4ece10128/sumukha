@@ -103,5 +103,11 @@ def mixing_embeddings(preprocess_path, embeddings_path_domain_adapted):
         wds_hat = vector_ds * projection_ds.T
         wda = (alpha * wg_hat) + (beta * wds_hat)
         mixed_embeddings[common_vocab] = wda
+    intersection_vocab = {key: index for index, key in enumerate(intersection_vocab.keys())}
+    vectors = np.zeros((len(intersection_vocab), 100), dtype=np.float32)
 
-    filesystem.save_obj(mixed_embeddings, embeddings_path_domain_adapted, 'domain_adapted_embeddings')
+    for index, word in enumerate(intersection_vocab.keys()):
+        vectors[index] = mixed_embeddings.get(word)[0]
+
+    filesystem.save_obj(intersection_vocab, preprocess_path, 'adapted_vocab_processed')
+    filesystem.save_obj(vectors, preprocess_path, 'adapted_vector_processed')
