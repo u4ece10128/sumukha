@@ -5,6 +5,7 @@ For further informations about change log please go [here](http://keepachangelog
 
 ## [Unreleased]
 ### change
+- Add automatic versioning support 
 - Implement Evaluation pipeline - Semantic Classifier
 - Perform Canonical Correlation Analysis on the embeddings 
 - Implement Encoding using domain based embeddings 
