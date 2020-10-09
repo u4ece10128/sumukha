@@ -50,4 +50,9 @@ setup(
             'tensorflow==2.2.0',
         ]
     },
+    entry_points={
+        'console_scripts': [
+            'sumukha = sumukha.interface.training.run:cli',
+        ],
+    },
 )
