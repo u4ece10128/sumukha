@@ -4,7 +4,7 @@ from sumukha.evaluation.evaluate_embeddings import Evaluate
 
 def run_evaluate():
     """
-
+    Evaluate the test set. Publish results on performances on all the embedders
     :return:
     """
     evaluate = Evaluate(embeddings_path=input_preprocess_path)

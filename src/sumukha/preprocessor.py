@@ -9,7 +9,7 @@ from sumukha.preprocessing.input_preprocessor import clean_data
 import pandas as pd
 
 
-def preprocessor(root_path='./', input_path=config.input_file_path,
+def run_preprocess(root_path='./', input_path=config.input_file_path,
                  preprocess_path=config.input_preprocess_path):
     # Create preprocess dir if it doesn't exists
     if not os.path.exists(preprocess_path):
@@ -36,9 +36,5 @@ def preprocessor(root_path='./', input_path=config.input_file_path,
     return preprocessed_dataset
 
 
-def run_preprocess(root_path, input_path, preprocess_path):
-    return preprocessor(root_path=root_path, input_path=input_path, preprocess_path=preprocess_path)
-
-
 if __name__ == '__main__':
-    preprocessor()
+    run_preprocess()
