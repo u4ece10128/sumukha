@@ -7,7 +7,7 @@ from sumukha.config import input_preprocess_path
 from sklearn.model_selection import train_test_split
 
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.layers import Dense, Input
 from tensorflow.keras.utils import to_categorical
 
@@ -69,7 +69,7 @@ class Evaluate:
         model.add(Dense(128, activation='linear', kernel_initializer='he_uniform'))
         model.add(Dense(64, activation='linear', kernel_initializer='he_uniform'))
         model.add(Dense(2, activation='softmax', kernel_initializer='he_uniform'))
-        model.compile(loss='categorical_crossentropy', optimizer=Adam(lr=0.0001), metrics=['accuracy'])
+        model.compile(loss='categorical_crossentropy', optimizer=RMSprop(lr=0.001), metrics=['accuracy'])
 
         model.fit(x_train, to_categorical(y_train), batch_size=32, epochs=20, validation_split=0.1, verbose=2)
 
