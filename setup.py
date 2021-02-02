@@ -25,7 +25,7 @@ setup(
         'pandas==1.0.3',
         'dotmap==1.2.17',
         'fasttext==0.9.2',
-        'igenius.brushes[full]==18.1.1',
+        'igenius.brushes[full]==18.7.0',
         'bs4==0.0.1',
         'scikit-learn==0.20.3',
         ],

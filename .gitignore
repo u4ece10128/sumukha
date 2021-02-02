@@ -18,3 +18,4 @@ outputs/*
 *.txt
 *.pkl
 *.bin
+*.csv
