@@ -21,7 +21,7 @@ setup(
     package_dir={'': 'src'},
     zip_safe=False,
     install_requires=[
-        'numpy==1.18.5',
+        'numpy==1.22.0',
         'pandas==1.0.3',
         'dotmap==1.2.17',
         'fasttext==0.9.2',
